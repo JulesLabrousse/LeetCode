@@ -1,1 +1,1 @@
-Solutions d'exercices LeetCode en C. Chaque solution inclut le code, les explications et parfois l'analyse de complexité.
+LeetCode exercise solutions in C. Each solution includes my annotated code and sometimes a complexity analysis.
