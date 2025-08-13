@@ -9,6 +9,7 @@ struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2) {
     struct ListNode *res = malloc(sizeof(struct ListNode));
     struct ListNode *head = res;
 
+    /* check if malloc failed */
     if (res == NULL)
         return (NULL);
     
@@ -25,6 +26,7 @@ struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2) {
             res->next = NULL;
         }
     }
+    /* process remaining digits in l1 */
     while (l1 != NULL) {
         res->val = (l1->val + carry) % 10;
         carry = (l1->val + carry) / 10;
@@ -36,6 +38,7 @@ struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2) {
             res->next = NULL;
         }
     }
+    /* process remaining digits in l2 */
     while (l2 != NULL) {
         res->val = (l2->val + carry) % 10;
         carry = (l2->val + carry) / 10;
@@ -47,6 +50,7 @@ struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2) {
             res->next = NULL;
         }
     }
+    /* add last carry if needed */
     if (carry > 0) {
         res->val = carry;
         res->next = NULL;
