@@ -1,7 +1,7 @@
 int removeDuplicates(int* nums, int numsSize) {
-    int r = 0;
-    int i = 1;
-    int w = 0;
+    int r = 0; /* reading index */
+    int i = 1; /* offset */
+    int w = 0; /* writing index */
 
     while (r < numsSize) {
         i = 1;
